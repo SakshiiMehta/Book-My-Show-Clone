@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import HeroSlider from "react-slick";
-// import { NextArrow, PrevArrow } from "./Arrows.Components";
+import { NextArrow, PrevArrow } from "./Arrows.Components";
 
 const HeroCarousel = () => {
   const [images, setImages] = useState([
@@ -39,20 +39,20 @@ const HeroCarousel = () => {
       vote_count: 346,
     },
   ]);
-
+  // Slider settings on large screen
   const settingsLG = {
     dots: true,
     arrows: true,
     slidesToShow: 1,
-    infinite: true,
+    infinite: true, //The loop should go on
     speed: 500,
     slideToScroll: 1,
     slidesToShow: 3,
     autoplay: true,
     autoplaySpeed: 2000,
     cssEase: "linear",
-    // nextArrow: <NextArrow />,
-    // prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
   const settings = {
     dots: true,
@@ -65,8 +65,8 @@ const HeroCarousel = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     cssEase: "linear",
-    // nextArrow: <NextArrow />,
-    // prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
 
   return (
