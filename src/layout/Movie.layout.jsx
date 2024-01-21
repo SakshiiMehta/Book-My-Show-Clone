@@ -3,13 +3,11 @@ import MovieNavbar from "../components/Navbar/MovieNavbar.Component";
 
 const MovieLayoutHoc =
   (Component) =>
-  (
-    { ...props } //if it has some infoo to be shared then we have spread operator
-  ) => {
+  ({ ...props }) => {
     return (
       <div>
         <MovieNavbar />
-        <component {...props} />
+        <Component {...props} />
         <div>Footer</div>
       </div>
     );
