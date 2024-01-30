@@ -35,3 +35,7 @@ npm install -D tailwindcss postcss autoprefixer (postcss autoprefixer is used fo
 > > Install headless UI from the tabs section
 > > Install react icons
 > > Install react-router-dom (for dealing with routes)
+
+<!-- Movie DB API -->
+
+https://api.themoviedb.org/3/movie/550?api_key=74f17c856f892fd0f55a2772836c94ac
