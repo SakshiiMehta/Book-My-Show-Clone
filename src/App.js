@@ -1,4 +1,5 @@
 import "./App.css";
+import axios from "axios";
 
 // Routers
 import { Routes, Route } from "react-router-dom";
@@ -12,6 +13,9 @@ import PlayPage from "./pages/Play.page";
 import MoviePage from "./pages/Movie.page";
 import HomePage from "./pages/Home.page";
 
+axios.defaults.baseURL = "https://api.themoviedb.org/3/";
+axios.defaults.params = {};
+axios.defaults.params["api_key"] = "74f17c856f892fd0f55a2772836c94ac";
 function App() {
   return (
     <Routes>
