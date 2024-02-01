@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import Poster from "../Poster/Poster.Component";
 
 const PosterSlider = (props) => {
-  const { posters, title, subtitle, isDark } = props;
+  const { posters, title, subtitle, isDark, config } = props;
   const settings = {
     infinite: true,
     speed: 500,
@@ -31,7 +31,7 @@ const PosterSlider = (props) => {
       <div className="flex flex-col items-start sm:ml-3 my-2">
         <h3
           className={`text-2xl font-bold ${
-            isDark ? "text-white" : "text-black" //If dark is true then white bg otherwise dark colour text
+            isDark ? "text-white" : "text-black"
           }`}
         >
           {title}
@@ -40,11 +40,20 @@ const PosterSlider = (props) => {
           {subtitle}
         </p>
       </div>
-      <Slider {...settings}>
-        {posters.map((each, index) => (
-          <Poster {...each} isDark={isDark} key={index} />
-        ))}
-      </Slider>
+      {config && (
+        <Slider {...config}>
+          {posters.map((each, index) => (
+            <Poster {...each} isDark={isDark} key={index} />
+          ))}
+        </Slider>
+      )}
+      {!config && (
+        <Slider {...settings}>
+          {posters.map((each, index) => (
+            <Poster {...each} isDark={isDark} key={index} />
+          ))}
+        </Slider>
+      )}
     </>
   );
 };
