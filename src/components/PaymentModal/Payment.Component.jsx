@@ -8,10 +8,11 @@ const PaymentModal = ({ setIsOpen, isOpen, price }) => {
   };
 
   const launchRazorPay = () => {};
+
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-8" onClose={closeModal}>
+        <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -21,7 +22,7 @@ const PaymentModal = ({ setIsOpen, isOpen, price }) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black/25" />
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -51,10 +52,10 @@ const PaymentModal = ({ setIsOpen, isOpen, price }) => {
                   <div className="mt-4 gap-3">
                     <button
                       type="button"
-                      className=" inline-flex justify-center rounded-md border border-transparent bg-red-500 px-4 py-2 text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-red-500 px-4 py-2 text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
                       onClick={launchRazorPay}
                     >
-                      Pay ${price}
+                      Pay $ {price}
                     </button>
                     <button
                       type="button"

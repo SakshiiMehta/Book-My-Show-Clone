@@ -39,3 +39,11 @@ npm install -D tailwindcss postcss autoprefixer (postcss autoprefixer is used fo
 <!-- Movie DB API -->
 
 https://api.themoviedb.org/3/movie/550?api_key=74f17c856f892fd0f55a2772836c94ac
+
+## DevOps
+
+Dev => Development Team
+Ops => Operation Team
+
+Devops and CICD (Docker & Kubernetes)
+git
