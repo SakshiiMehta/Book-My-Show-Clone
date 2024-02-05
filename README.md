@@ -47,3 +47,58 @@ Ops => Operation Team
 
 Devops and CICD (Docker & Kubernetes)
 git
+
+Docker >> EC2 Instance >> Img and Container
+Image(Parent)
+Containers(Child) || Server
+
+Kubernetes (Orchestra)
+
+    >> Docker Deamon ---> Server (Initialization)
+    >> Docker Clients ----> Client
+    >> Docker Swarm -----> Orchestra (main | master node)
+
+    Child Node
+    >>Child NOde
+        >> POD (Container)
+        >> Development (Where it will keep close eye on POD)
+
+Eg: I want to run a server in the docker with 3 conatiners on my book my show app
+
+Docker:
+
+> > Image
+
+    > > Container1
+    > > Container2
+    > > Container3
+
+Kubernetes: >> Master NOde >> Child Node | POD-1 (POD is the server) >> Child Node | POD-2 >> Child Node | POD-3
+
+Master Node
+Child Node- 1 -- Child Node- 2 -- Child Node- 3 -- Development
+
+Development: Analize and maintain all the PODs/Child Nodes/Servers/ Containers
+
+> > Nodes >>
+
+            > > Master Node (A person holding stick in Orchestra event | Lead)
+            > > Child Node ( A group of people following the lead)
+
+> > NGINX (Light weight servers)
+
+> > Amazon Elastic Compute Cloud
+
+Docker >> Image >> Containers
+
+Client Server Architecture
+
+AWS
+
+    >> Service: EC2 (Virtual Machine)=> Unix OS
+    Base OS >> Windows
+
+NGINX (Light Weight Server)
+
+        >> Reverse Proxy
+        >> Load Balancing
