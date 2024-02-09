@@ -89,7 +89,7 @@ Development: Analize and maintain all the PODs/Child Nodes/Servers/ Containers
 
 > > Amazon Elastic Compute Cloud
 
-Docker >> Image >> Containers
+Docker >> Image >> Containers 
 
 Client Server Architecture
 
