@@ -1,13 +1,29 @@
 import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 
 const PaymentModal = ({ setIsOpen, isOpen, price }) => {
   const closeModal = () => {
     setIsOpen(false);
   };
 
-  const launchRazorPay = () => {};
+  const launchRazorPay = () => {
+    let options = {
+      key: "rzp_test_rsNQGTbZkngadg",
+      amount: price * 100,
+      currency: "INR",
+      name: "Book My Show Clone",
+      description: "Movie purchase or rent",
+      handler: () => {
+        setIsOpen(false);
+        alert("Payment Succesful");
+      },
+      theme: { color: "#c4242d" },
+    };
+
+    let razorPay = window.Razorpay(options);
+    razorPay.open();
+  };
 
   return (
     <>
